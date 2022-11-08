@@ -177,7 +177,7 @@ def search(maze, cost, start, end):
             yet_to_visit_list.append(child)
 
 
-if __name__ == '__main__':
+def main():
 
     maze = [[0, 0, 0, 0, 1, 0, 0, 0, 0, 0],
             [0, 0, 0, 0, 1, 0, 0, 0, 0, 0],
@@ -197,10 +197,14 @@ if __name__ == '__main__':
     path = search(maze,cost, start, end)
 
     if path:
-        # if a path is found
+        # if a path was found
         print(path)
         print('\n'.join([''.join(["{:" ">3d}".format(item) for item in row]) 
         for row in path]))
     else:
         # if no path was found
         print('No path was found!')
+
+
+if __name__ == '__main__':
+    main()
